@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  
   font-family: 'Playfair Display', serif;
   font-size: 14px;
   font-weight: 500;
@@ -32,6 +32,8 @@
   width: calc($ru * 2.5);
   height: calc($ru * 2.5);
   text-align: center;
+	user-select: none;
+	cursor: crosshair;
 
 	div {
 		width: 100%;
