@@ -1,0 +1,107 @@
+@use '../global.scss' as *;
+
+.header {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tileGrid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.tile {
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.5s ease;
+  width: calc($ru * 2.5);
+  height: calc($ru * 2.5);
+  text-align: center;
+
+	div {
+		width: 100%;
+		height: 100%;
+		border: 2px solid rgb(81, 81, 81);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+  
+
+  h1 {
+    font-size: calc($ru * 1.5);
+  }
+
+  h2 {
+    font-size: calc($ru * 0.5);
+  }
+
+  h3 {
+    font-size: calc($ru * 0.3);
+    max-width: calc($ru * 2);
+  }
+
+  svg {
+    width: calc($ru * 1);
+    height: auto;
+  }
+
+  &:hover {
+    background: #f6f6f6;
+  }
+
+  &:nth-child(-n+10) {
+    animation: slideUp 1.2s ease-out 0.2s forwards;
+  }
+
+  &:nth-child(n+11):nth-child(-n+20) {
+    animation: slideUp 1.2s ease-out 0.7s forwards;
+  }
+
+  &:nth-child(n+21):nth-child(-n+30) {
+    animation: slideUp 1.2s ease-out 1.2s forwards;
+  }
+
+  &:nth-child(n+31):nth-child(-n+40) {
+    animation: slideUp 1.2s ease-out 1.7s forwards;
+  }
+
+  &:nth-child(n+41):nth-child(-n+50) {
+    animation: slideUp 1.2s ease-out 2.2s forwards;
+  }
+
+  &:nth-child(n+51):nth-child(-n+150) {
+    animation: slideUp 1.2s ease-out 2.7s forwards;
+  }
+
+  &:nth-child(-n+150) {
+    opacity: 0;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
