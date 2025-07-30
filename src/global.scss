@@ -10,8 +10,8 @@ body {
   font-weight: 400;
   line-height: 1.6;
   overflow-x: hidden;
-  //overflow-y: hidden;
-  //animation: enableScroll 3.4s ease-out forwards;
+  overflow-y: hidden;
+  animation: enableScroll 3.4s ease-out forwards;
 }
 
 $ru: min(calc(50px + 2vw), 10vw);

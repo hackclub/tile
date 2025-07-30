@@ -101,7 +101,7 @@ export default function Home() {
       smoothTouch: 0.1,
     });
 
-    //window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   });
 
   return (
