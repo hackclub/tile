@@ -40,6 +40,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		flex-direction: column;
+	}
+
+	img {
+		width: 75%;
 	}
   
 
@@ -49,11 +54,13 @@
 
   h2 {
     font-size: calc($ru * 0.5);
+		margin: 0;
   }
 
   h3 {
     font-size: calc($ru * 0.3);
     max-width: calc($ru * 2);
+		margin: 0;
   }
 
   svg {
@@ -86,7 +93,7 @@
   }
 
   &:nth-child(n+51):nth-child(-n+150) {
-    animation: slideUp 1.2s ease-out 2.7s forwards;
+    animation: slideUp 1.2s ease-out 0s forwards;
   }
 
   &:nth-child(-n+150) {

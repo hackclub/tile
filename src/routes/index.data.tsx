@@ -99,12 +99,198 @@ const predefinedContent = [
     '',
   ],
   [],
+  ['', '', '', '', <h2>specs</h2>, <h2>& faq</h2>, '', '', '', ''],
+  [
+    '',
+    '',
+    '',
+    '',
+    <h3>your tile needs to have moving parts or be functional</h3>,
+    <h3>(it cannot be a static decoration)</h3>,
+    '',
+    '',
+    '',
+    '',
+  ],
+  [
+    '',
+    '',
+    '',
+    '',
+    <h3>your tile must fit within the 10x10 cm base</h3>,
+    <h3>(you may print in multiple parts)</h3>,
+    '',
+    '',
+    '',
+    '',
+  ],
+  [
+    '',
+    '',
+    '',
+    '',
+    <h3>you may only use approved parts</h3>,
+    <h3>(parts list below)</h3>,
+    '',
+    '',
+    '',
+    '',
+  ],
+  [
+    '',
+    '',
+    '',
+    '',
+    <h3>make sure you have hackatime installed</h3>,
+    <h3>(ask in slack for hackatime extensions)</h3>,
+    '',
+    '',
+    '',
+    '',
+  ],
+  [
+    '',
+    '',
+    '',
+    '',
+    <h3>you must spend at least 3 hours</h3>,
+    <h3>(you get one extra tile every 4 hours beyond that)</h3>,
+    '',
+    '',
+    '',
+    '',
+  ],
+  [
+    '',
+    '',
+    '',
+    '',
+    <h3>you may make up to 3 tiles</h3>,
+    <h3>(make sure they're unique & show progress)</h3>,
+    '',
+    '',
+    '',
+    '',
+  ],
+  [
+    '',
+    '',
+    '',
+    '',
+    <h3>the deadline is August 18th</h3>,
+    <h3>(get building now!)</h3>,
+    '',
+    '',
+    '',
+    '',
+  ],
+
+  [
+    '',
+    '',
+    '',
+    '',
+    <h3>have another question?</h3>,
+    <a
+      href="https://hackclub.slack.com/archives/C097E6ZAF99"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <h3>ask in slack (click)</h3>
+    </a>,
+    '',
+    '',
+    '',
+    '',
+  ],
   [],
+  ['', '', '', '', <h2>the</h2>, <h2>parts</h2>, '', '', '', ''],
+  ['', '', '', '', <h2>base</h2>, <h3>(click to download)</h3>, '', '', '', ''],
+  [
+    '',
+    '',
+    '',
+    <>
+      <h2>normal base</h2>
+      <h3>(recommended)</h3>
+    </>,
+    <a href="/tile-base.stl" download="tile-base.stl">
+      <img src="/tile.png" />
+    </a>,
+    <a href="/tile-base-hollow.stl" download="tile-base-hollow.stl">
+      <img src="/tile-hollow.png" />
+    </a>,
+    <>
+      <h2>hollow base</h2>
+      <h3>(for more customization)</h3>
+    </>,
+    '',
+    '',
+    '',
+  ],
+  [
+    '',
+    '',
+    '',
+    '',
+    <h2>little bits</h2>,
+    <h3>(max 5 of each)</h3>,
+    '',
+    '',
+    '',
+    '',
+  ],
+
+  [
+    '',
+    '',
+    '',
+    <h3>10 x 2mm magnet</h3>,
+    <img src="/magnet.png" />,
+    <img src="/spring.png" />,
+    <h3>5 x 25mm spring</h3>,
+    '',
+    '',
+    '',
+  ],
   [],
+  ['', '', '', '', <h2>examples</h2>, <h2>& gallery</h2>, '', '', '', ''],
+  [
+    '',
+    '',
+    '',
+    '',
+    <img src="/phone-holder.png" />,
+    <h3>phone holder by @Olive</h3>,
+    '',
+    '',
+    '',
+  ],
+  [
+    '',
+    '',
+    '',
+    '',
+    <img src="/example-2.png" />,
+    <h3>example 2 by @Patricio</h3>,
+    '',
+    '',
+    '',
+  ],
+  [
+    '',
+    '',
+    '',
+    '',
+    <h3>gallery coming soon</h3>,
+    <h3>(waiting for submissions)</h3>,
+    '',
+    '',
+    '',
+    '',
+  ],
   [],
-  [],
-  [],
-  [],
+  ['', '', '', '', <h2>submit</h2>, <h2>now!</h2>, '', '', '', ''],
   [],
   [],
   [],
@@ -128,7 +314,7 @@ export default function preloadTiles({
   const tiles: Tile[][] = [];
 
   // Generate 10x5 grid of tiles with predefined content
-  for (let row = 0; row < 15; row++) {
+  for (let row = 0; row < 35; row++) {
     const tileRow: Tile[] = [];
     for (let col = 0; col < 10; col++) {
       const contentIndex = (row * 10 + col) % predefinedContent.length;

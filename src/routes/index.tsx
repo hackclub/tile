@@ -28,16 +28,17 @@ const preloadedData = preloadTiles({
 
 export default function Home() {
   const [tiles] = createStore<Tile[][]>(preloadedData.tiles);
-  const [animatingTiles] = createStore<Set<HTMLElement>>(new Set());
+  const [animatingTiles, setAnimatingTiles] = createStore<string[]>([]);
 
   const handleTileClick = (event: MouseEvent) => {
     const tile = event.currentTarget as HTMLElement;
-    if (animatingTiles.has(tile)) return;
+    if (animatingTiles.includes(tile.id) || tile.classList.contains('no-fall'))
+      return;
+    console.log(animatingTiles);
 
-    animatingTiles.add(tile);
+    setAnimatingTiles(animatingTiles.length, tile.id);
     tile.style.zIndex = '1000';
     const content = tile.firstElementChild as HTMLElement;
-    console.log(tile);
 
     const tl = gsap.timeline();
     for (let i = 0; i < 8; i++) {
@@ -78,7 +79,7 @@ export default function Home() {
         duration: 0.5,
         ease: 'power2.out',
         onComplete: () => {
-          animatingTiles.delete(tile);
+          setAnimatingTiles(animatingTiles.filter((t) => t !== tile.id));
           tile.style.zIndex = '';
         },
       });
@@ -112,8 +113,14 @@ export default function Home() {
               <For each={tileRow}>
                 {(tile) => (
                   <div
-                    class={`${styles.tile} ${tile.row}-${tile.col}`}
+                    class={`${styles.tile} ${tile.row}-${tile.col} ${
+                      (tile.content as HTMLElement).firstElementChild
+                        ?.tagName === 'A'
+                        ? 'no-fall'
+                        : ''
+                    }`}
                     onClick={handleTileClick}
+                    id={`tile-${tile.row}-${tile.col}`}
                   >
                     {tile.content}
                   </div>
