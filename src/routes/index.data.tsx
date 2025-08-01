@@ -197,6 +197,7 @@ const predefinedContent = [
       href="https://hackclub.slack.com/archives/C097E6ZAF99"
       target="_blank"
       rel="noopener noreferrer"
+      class="no-fall"
     >
       <h3>ask in slack (click)</h3>
     </a>,
@@ -216,10 +217,14 @@ const predefinedContent = [
       <h2>normal base</h2>
       <h3>(recommended)</h3>
     </>,
-    <a href="/tile-base.stl" download="tile-base.stl">
+    <a href="/tile-base.step" download="tile-base.step" class="no-fall">
       <img src="/tile.png" />
     </a>,
-    <a href="/tile-base-hollow.stl" download="tile-base-hollow.stl">
+    <a
+      href="/tile-base-hollow.step"
+      download="tile-base-hollow.step"
+      class="no-fall"
+    >
       <img src="/tile-hollow.png" />
     </a>,
     <>
@@ -239,7 +244,7 @@ const predefinedContent = [
       <h2>plug</h2>
       <h3>{'(hole > magnet > plug)'}</h3>
     </>,
-    <a href="/plug.stl" download="plug.stl">
+    <a href="/plug.step" download="plug.step" class="no-fall">
       <img src="/plug.png" />
     </a>,
     '',
@@ -278,7 +283,9 @@ const predefinedContent = [
     '',
     '',
     '',
-    <img src="/phone-holder.png" />,
+    <a href="/phone-holder.step" download="phone-holder.step" class="no-fall">
+      <img src="/phone-holder.png" />
+    </a>,
     <h3>phone holder by @Olive</h3>,
     '',
     '',
@@ -308,7 +315,22 @@ const predefinedContent = [
     '',
   ],
   [],
-  ['', '', '', '', <a href="https://submit.hackclub.com/tile"><h2>submit</h2></a>, <a href="https://submit.hackclub.com/tile"><h2>now!</h2></a>, '', '', '', ''],
+  [
+    '',
+    '',
+    '',
+    '',
+    <a href="https://submit.hackclub.com/tile" class="no-fall">
+      <h2>submit</h2>
+    </a>,
+    <a href="https://submit.hackclub.com/tile" class="no-fall">
+      <h2>now!</h2>
+    </a>,
+    '',
+    '',
+    '',
+    '',
+  ],
   [],
   [],
   [],

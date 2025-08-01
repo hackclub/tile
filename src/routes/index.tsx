@@ -32,13 +32,15 @@ export default function Home() {
 
   const handleTileClick = (event: MouseEvent) => {
     const tile = event.currentTarget as HTMLElement;
-    if (animatingTiles.includes(tile.id) || tile.classList.contains('no-fall'))
-      return;
+    const content = tile.firstElementChild as HTMLElement;
+
+    const hasLink = content.querySelector('a') !== null;
+
+    if (animatingTiles.includes(tile.id) || hasLink) return;
     console.log(animatingTiles);
 
     setAnimatingTiles(animatingTiles.length, tile.id);
     tile.style.zIndex = '1000';
-    const content = tile.firstElementChild as HTMLElement;
 
     const tl = gsap.timeline();
     for (let i = 0; i < 8; i++) {
@@ -113,12 +115,7 @@ export default function Home() {
               <For each={tileRow}>
                 {(tile) => (
                   <div
-                    class={`${styles.tile} ${tile.row}-${tile.col} ${
-                      (tile.content as HTMLElement).firstElementChild
-                        ?.tagName === 'A'
-                        ? 'no-fall'
-                        : ''
-                    }`}
+                    class={`${styles.tile} ${tile.row}-${tile.col}`}
                     onClick={handleTileClick}
                     id={`tile-${tile.row}-${tile.col}`}
                   >
