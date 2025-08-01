@@ -308,7 +308,7 @@ const predefinedContent = [
     '',
   ],
   [],
-  ['', '', '', '', <h2>submit</h2>, <h2>now!</h2>, '', '', '', ''],
+  ['', '', '', '', <a href="https://submit.hackclub.com/tile"><h2>submit</h2></a>, <a href="https://submit.hackclub.com/tile"><h2>now!</h2></a>, '', '', '', ''],
   [],
   [],
   [],
