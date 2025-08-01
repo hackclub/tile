@@ -117,7 +117,9 @@ const predefinedContent = [
     '',
     '',
     '',
-    <h3>your tile must fit within the 10x10 cm base</h3>,
+    <h3>
+      your tile must fit within the 10x10 cm base & be no more than 15cm tall
+    </h3>,
     <h3>(you may print in multiple parts)</h3>,
     '',
     '',
@@ -224,6 +226,22 @@ const predefinedContent = [
       <h2>hollow base</h2>
       <h3>(for more customization)</h3>
     </>,
+    '',
+    '',
+    '',
+  ],
+  [
+    '',
+    '',
+    '',
+    '',
+    <>
+      <h2>plug</h2>
+      <h3>{'(hole > magnet > plug)'}</h3>
+    </>,
+    <a href="/plug.stl" download="plug.stl">
+      <img src="/plug.png" />
+    </a>,
     '',
     '',
     '',
