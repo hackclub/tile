@@ -291,17 +291,19 @@ const predefinedContent = [
     '',
     '',
   ],
-  // [
-  //   '',
-  //   '',
-  //   '',
-  //   '',
-  //   <img src="/example-2.png" />,
-  //   <h3>example 2 by @Patricio</h3>,
-  //   '',
-  //   '',
-  //   '',
-  // ],
+  [
+    '',
+    '',
+    '',
+    '',
+    <a href="/marble-run.stl" download="marble-run.stl" class="no-fall">
+      <img src="/marble-run.png" />
+    </a>,
+    <h3>marble run by @Patricio</h3>,
+    '',
+    '',
+    '',
+  ],
   [
     '',
     '',
